@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'source_sans_probold';
+    url('../font/SourceSansPro-Bold-webfont.woff') format('woff'),
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    url('../font/SourceSansPro-Regular-webfont.woff') format('woff'),
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'axelregular';
+    src: url('../fonts/axel-regular-webfont.woff') format('woff');
+    font-style: normal;
+}

@@ -1,0 +1,118 @@
+@media only print {
+  @blue: #0196D8;
+  @white: #FFFFFF;
+  @black: #000000;
+
+  @page {
+
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  body {
+    font-family: "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif !important;
+    font-size: 8px;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .header-blue {
+    background-color: @blue !important;
+    color: #FFFFFF !important;
+    padding: 15px 55px;
+    -webkit-print-color-adjust: exact;
+    height: 50px;
+  }
+
+  .blue-title {
+    color: @blue !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .report-body {
+    padding: 10px 55px 10px 55px;
+    height: 670px;
+  }
+
+  .report-footer {
+    padding: 0 55px;
+    font-size: 8px;
+  }
+
+  .index-circle {
+    background-color: @blue !important;
+    color: @white !important;
+    font-size: 14px;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .index-label {
+    margin-top: 5px;
+    font-size: 14px;
+    color: @blue !important;
+  }
+
+  .suggestion-text {
+    text-align: center;
+  }
+
+  .o-table {
+    width: 100%;
+    tr {
+      border: none;
+      &.title {
+        font-weight: bold;
+      }
+    }
+    td,
+    th {
+      border: none;
+      padding: 1px 3px;
+    }
+    tr.border-top {
+      border-top: 1px solid @black;
+    }
+    tr.border-bottom {
+      border-bottom: 1px solid @black;
+    }
+    tr.border-both {
+      border-top: 1px solid @black;
+      border-bottom: 1px solid @black;
+    }
+
+    &.page-3 {
+      tr{
+        td:first-child + td,
+        th:first-child + th {
+          text-align: right;
+        }
+        td:first-child + td + td,
+        th:first-child + th + th {
+          text-align: right;
+        }
+        td:first-child + td + td + td,
+        th:first-child + th + th + th {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .static-footer-text {
+    padding: 0 40px;
+  }
+}
+
+

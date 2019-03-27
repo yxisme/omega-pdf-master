@@ -1,0 +1,52 @@
+body {
+  font-family: 'Source Sans Pro', 'Microsoft YaHei', '微软雅黑', 'STXihei', '华文细黑', sans-serif;
+}
+h1.navbar-brand {
+  margin: 0;
+  cursor: pointer;
+}
+#main > .sub-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+h1.title {
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 30px;
+  font-family: 'Roboto Slab', serif;
+}
+.main-form {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foot h1 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.fileinput {
+  width: 100%;
+}
+.download-link {
+  float: right;
+  line-height: 34px;
+}
+.msg-container {
+  max-height: 170px;
+  overflow: auto;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+#submit-btn {
+  float: left;
+}
+.professional-select {
+  float: left;
+  margin-left: 5px;
+  width: 150px;
+}

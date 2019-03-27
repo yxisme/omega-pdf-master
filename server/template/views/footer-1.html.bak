@@ -1,0 +1,11 @@
+<div class="row report-footer">
+    <div class="col-xs-5 nopadding left-align">
+        <br>
+        <div>{{report.name}}</div>
+    </div>
+    <div class="col-xs-2 nopadding center-align">
+        <br>
+        <div ng-if="report.is_professional">Page: {{page.page}} of 5</div>
+        <div ng-if="!report.is_professional">Page: {{page.page}} of 3</div>
+    </div>
+</div>

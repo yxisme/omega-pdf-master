@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Omega PDF Service</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" type='text/css' href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel='stylesheet' type='text/css' href='libs/bootstrap-fileinput/bootstrap-fileinput.css'>
+    <link rel='stylesheet' type='text/css' href='bower_components/angular-toastr/dist/angular-toastr.min.css'>
+    <link rel='stylesheet' type='text/css' href='bower_components/angular-block-ui/dist/angular-block-ui.min.css'>
+
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro'>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto+Slab:700'>
+
+    <link rel='stylesheet' type='text/css' href='resources/css/style.css'>
+
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</head>
+
+<body ng-app="omega">
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <h1 class="navbar-brand">OMEGA3</h1>
+        </div>
+    </div>
+</nav>
+<!--HEADER NAV BAR END-->
+<!--BODY VIEW-->
+<div id="main" ng-controller="MainController as ctrl">
+    <div id="home-main" class="sub-container container">
+        <h1 class="title">OMEGA3 HEALTH INDEX</h1>
+        <form class="form main-form">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+                <div class="input-group">
+                    <div class="form-control uneditable-input span3" data-trigger="fileinput">
+                        <i class="fa fa-file fileinput-exists"></i>&nbsp;
+                        <span class="fileinput-filename"> </span>
+                    </div>
+                        <span class="input-group-addon btn default btn-file">
+                        <span class="fileinput-new"> 选择CSV文件 </span>
+                        <span class="fileinput-exists"> 更改 </span>
+                        <input type="file" name="file-field" data-bind-file data-ng-model="fileSelected">
+                        </span>
+                    <a href="#" class="input-group-addon btn red fileinput-exists" data-dismiss="fileinput"
+                       ng-click="onFileRemoveClick()"> 移除
+                    </a>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary left" id="submit-btn" ng-click="onSubmitBtnClick()">提交
+                </button>
+                <select class="form-control professional-select" ng-model="isProfessional">
+                    <option value="0" selected="selected">简化版</option>
+                    <option value="1">专业版</option>
+                </select>
+                <div class="download-link"><a href="resources/files/sample.csv">样本</a></div>
+                <div class="clear"></div>
+            </div>
+        </form>
+        <div class="text-center msg-container text-success" ng-bind-html="successMsg"></div>
+        <div class="text-center msg-container text-danger" ng-bind-html="errorMsg"></div>
+    </div>
+</div>
+<!--BODY VIEW END-->
+<!--FOOTER-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container foot">
+        <h1 style="float: left">Made with passion in Hoboken</h1>
+        <h1 style="float: right">© Powered by <a href="http://www.shiyangfei.com">Shiyang Fei</a></h1>
+    </div>
+</nav>
+
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-block-ui/dist/angular-block-ui.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+<script type="text/javascript" src="bower_components/papaparse/papaparse.js"></script>
+<script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+<script type="text/javascript" src="node_modules/file-saver/FileSaver.min.js"></script>
+<script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+
+
+<script type="text/javascript" src="app/override.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/service/MainService.js"></script>
+<script type="text/javascript" src="app/directive/FileChange.js"></script>
+<script type="text/javascript" src="app/controller/MainController.js"></script>
+</body>
+
+</html>

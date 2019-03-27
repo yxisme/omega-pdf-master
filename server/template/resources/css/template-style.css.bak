@@ -1,0 +1,99 @@
+@media only print {
+  .page-break-after {
+    page-break-after: always;
+  }
+  body {
+    font-family: "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif !important;
+    font-size: 8px;
+    -webkit-print-color-adjust: exact;
+  }
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .header-blue {
+    background-color: #0196D8 !important;
+    color: #FFFFFF !important;
+    padding: 15px 55px;
+    -webkit-print-color-adjust: exact;
+    height: 50px;
+  }
+  .blue-title {
+    color: #0196D8 !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .report-body {
+    padding: 10px 55px 10px 55px;
+    height: 670px;
+  }
+  .report-footer {
+    padding: 520px 55px 0 55px;
+    font-size: 8px;
+  }
+  .index-circle {
+    background-color: #0196D8 !important;
+    color: #FFFFFF !important;
+    font-size: 14px;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  .index-label {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #0196D8 !important;
+  }
+  .suggestion-text {
+    text-align: center;
+  }
+  .o-table {
+    width: 100%;
+  }
+  .o-table tr {
+    border: none;
+  }
+  .o-table tr.title {
+    font-weight: bold;
+  }
+  .o-table td,
+  .o-table th {
+    border: none;
+    padding: 1px 3px;
+  }
+  .o-table tr.border-top {
+    border-top: 1px solid #000000;
+  }
+  .o-table tr.border-bottom {
+    border-bottom: 1px solid #000000;
+  }
+  .o-table tr.border-both {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+  .o-table.page-3 tr td:first-child + td,
+  .o-table.page-3 tr th:first-child + th {
+    text-align: right;
+  }
+  .o-table.page-3 tr td:first-child + td + td,
+  .o-table.page-3 tr th:first-child + th + th {
+    text-align: right;
+  }
+  .o-table.page-3 tr td:first-child + td + td + td,
+  .o-table.page-3 tr th:first-child + th + th + th {
+    text-align: right;
+  }
+  .static-footer-text {
+    padding: 500px 40px 0px 40px;
+  }
+  .custom_font_size {
+	font-size:18px;
+	/* 正常版：15px; */
+  }
+  .chart_font_size {
+    font-size:10px;
+  }
+}
