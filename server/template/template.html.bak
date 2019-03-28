@@ -700,7 +700,7 @@
     </div>
 
     <!--PAGE 8-->
-    <div class="custom_font_size page-container page-break-after" ng-if="report.is_professional">
+    <div style="font-size:18px" class="custom_font_size page-container page-break-after" ng-if="report.is_professional">
         <ng-include src="'views/header-1.html'"></ng-include>
         <div class="report-body">
             <div class="top15">
