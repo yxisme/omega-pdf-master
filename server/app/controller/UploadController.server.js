@@ -28,8 +28,9 @@ var fieldsToTrans = {
 exports.upload = function (req, res, next) {
     var data = req.body.profiles,
         isProfessional = req.body.isProfessional;
+    winston.info('befor process: ' + data);
     processRawData(data, isProfessional);
-    winston.info(data);
+    winston.info('processed: ' + data);
     startProcess(data, res);
 };
 
@@ -329,21 +330,26 @@ function getSingleRowPercentile(item) {
             for (i = 0; i < len; i++) {
                 singlePercentile = percentile[i];
                 nextPercentile = percentile[i + 1];
+                var result = singlePercentile.percentile;
+                if (key == 'total_omega3' || key == 'omega3_index') {
+                    result = len - singlePercentile.percentile + 1;
+                }
+
                 if (!nextPercentile) {
-                    item[key + '_rank'] = singlePercentile.percentile + '%';
+                    item[key + '_rank'] = result + '%';
                     break;
                 }
                 if (i == 0 && singlePercentile[key] >= value) {
-                    item[key + '_rank'] = singlePercentile.percentile + '%';
+                    item[key + '_rank'] = result + '%';
                     break;
                 }
                 if (singlePercentile[key] == value) {
-                    item[key + '_rank'] = singlePercentile.percentile + '%';
+                    item[key + '_rank'] = result + '%';
                     break;
                 }
 
                 if (singlePercentile[key] < value && nextPercentile[key] > value) {
-                    item[key + '_rank'] = singlePercentile.percentile + '%';
+                    item[key + '_rank'] = result + '%';
                     break;
                 }
             }

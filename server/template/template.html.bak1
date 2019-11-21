@@ -160,14 +160,14 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>二十碳三烯酸(20:3n3)</td>
-                        <td>{{report.C20_3n3}}</td>
+                        <td>二十碳五烯酸(EPA, 20:5n3)</td>
+                        <td>{{report.C20_5n3}}</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>二十二碳五烯酸n3(22:5n3)</td>
-                        <td>{{report.C20_5n3}}</td>
+                        <td>{{report.C22_5n3}}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -186,13 +186,19 @@
                     </tr>
                     <tr>
                         <td>亚油酸(18:2n6)</td>
-                        <td>{{report.C18_2n6c}}</td>
+                        <td>{{report.C18_2n6}}</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>伽马亚油酸(18:3n6)</td>
                         <td>{{report.C18_3n6}}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>二十碳二烯酸(20:2n6)</td>
+                        <td>{{report.C20_2n6}}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -209,8 +215,14 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>二十二碳二烯酸(22:2n6)</td>
-                        <td>{{report.c22_2n6}}</td>
+                        <td>二十二碳四烯酸(22:4n6)</td>
+                        <td>{{report.C22_4n6}}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>二十二碳五烯酸(22:5n6)</td>
+                        <td>{{report.c22_5n6}}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -222,32 +234,14 @@
                         <td>{{report.total_monounsaturated_ref_range}}</td>
                     </tr>
                     <tr>
-                        <td>十四碳烯酸(14:1)</td>
-                        <td>{{report.C14_1}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>银杏酸(15:1)</td>
-                        <td>{{report.C15_1}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>棕榈油酸(16:1)</td>
-                        <td>{{report.C16_1}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>银杏酸(17:1)</td>
-                        <td>{{report.C17_1}}</td>
+                        <td>棕榈油酸(16:1n7)</td>
+                        <td>{{report.C16_1n7}}</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>油酸(18:1n9)</td>
-                        <td>{{report.C18_1n9c}}</td>
+                        <td>{{report.C18_1n9}}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -258,17 +252,12 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>芥酸(22:1)</td>
-                        <td>{{report.C22_1}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td>神经酸(24:1n9)</td>
                         <td>{{report.C24_1n9}}</td>
                         <td></td>
                         <td></td>
                     </tr>
+
                     <!--SECTION-4-->
                     <tr class="border-both title">
                         <td>饱和脂肪酸</td>
@@ -283,20 +272,8 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>十五烷酸(15:0)</td>
-                        <td>{{report.C15_0}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td>棕榈酸(16:0)</td>
                         <td>{{report.C16_0}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>十七烷酸(17:0)</td>
-                        <td>{{report.C17_0}}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -313,20 +290,8 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>二十一烷酸(21:0)</td>
-                        <td>{{report.C21_0}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td>二十二碳烷酸(22:0)</td>
                         <td>{{report.C22_0}}</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>二十三烷酸(23:0)</td>
-                        <td>{{report.C23_0}}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -442,12 +407,12 @@
                 <div class="blue-title col-xs-5 left-align">全部脂肪酸结果<br>报告简介</div>
                 <ng-include src="'views/profile-table.html'" class="col-xs-7"></ng-include>
             </div>
-            <!-- <div class="top15">
+            <div class="top15">
                 <p class="bolder-text">反式脂肪酸</p>
                 <p>
                     反式脂肪酸和更自然的顺式脂肪酸的区别在于脂肪酸分子中双键的方向。由双键结合的碳原子在顺式脂肪酸中呈同侧而在反式脂肪中呈异侧。(参照我们网站上反式脂肪酸索引标签下的问答部分。)这些脂肪酸大多是非天然、从称为“氢化作用”的工业加工中形成，即将液体油转化为固体脂肪，“部分氢化作用”则是只将部分油中的顺式多不饱和脂肪酸转化成反式单不饱和脂肪酸，即允许产物保持液态。(例如部分氢化的豆油通常用于沙拉酱和油炸物)。这些“工业加工的”反式脂肪酸目前普遍被认为对心脏健康有负面作用，并且因为该浓度在血液中是直接反应了其在膳食中的浓度，相对而言改变膳食习惯从而改变血中浓度就相对简单。(Omega-3也是一样，除非我们想在膳食和血液中观测更多的Omega-3和更少的反式脂肪酸。)我们的网站上在反式脂肪酸索引标签下的问答部分中解释了让反式脂肪酸的理想状态设定在低于1%血中浓度的基本理论。
                 </p>
-            </div> -->
+            </div>
             <div class="top15">
                 <p class="bolder-text">比率</p>
                 <p>
@@ -735,7 +700,6 @@
     </div>
 
     <!--PAGE 8-->
-    <!--
     <div style="font-size:18px" class="custom_font_size page-container page-break-after" ng-if="report.is_professional">
         <ng-include src="'views/header-1.html'"></ng-include>
         <div class="report-body">
@@ -751,6 +715,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <!--SECTION-1-->
                     <tr>
                         <td>黄油</td>
                         <td>1匙</td>
@@ -920,7 +885,7 @@
         <div class="static-footer-text">美国农业部SR26，获取来源http://ndb.nal.usda.gov
             2014年2月1日。基于食物供给中不断改变的反式脂肪酸水平，这些数值仅供参考。查看食物产品上的营养成分表是了解反式脂肪酸水平最确切的方法。
         </div>
-    </div>-->
+    </div>
 </div>
 </body>
 
