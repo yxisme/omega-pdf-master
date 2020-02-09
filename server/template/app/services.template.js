@@ -5,16 +5,30 @@ var app = angular.module('template');
 app.service('MainService', function ($http) {
     var me = this;
 
-    me.getOmega3IndexSummaryText = function (indexText) {
-        var index = parseFloat(indexText);
+    me.getOmega3IndexSummaryText = function (n3IndexText, n3n6Text) {
+        var index = parseFloat(n3IndexText);
+        var n3n6 = parseFloat(n3n6Text);
         if (index > 8) {
-            return me.omega3SummaryText.high;
+            if (n3n6 < 4) {
+                return me.omega3SummaryText.high;
+            } else {
+                return me.omega3SummaryText.highSpare;
+            }
         }
         if (index <= 8 && index >= 4) {
-            return me.omega3SummaryText.medium;
+            if (n3n6 >= 4) {
+                return me.omega3SummaryText.medium;
+            } else {
+                return me.omega3SummaryText.mediumSpare;
+            }
+            
         }
         if (index < 4) {
-            return me.omega3SummaryText.low;
+            if (n3n6 >= 4) {
+                return me.omega3SummaryText.low;
+            } else {
+                return me.omega3SummaryText.lowSpare;
+            }
         }
     };
 
@@ -29,10 +43,10 @@ app.service('MainService', function ($http) {
             return me.n6n3SummaryText.low;
         }
         if (index <= 6 && index >= 4) {
-            return me.n6n3SummaryText.medium;
+            return me.n6n3SummaryText.mediumSpare;
         }
         if (index > 6) {
-            return me.n6n3SummaryText.high;
+            return me.n6n3SummaryText.highSpare;
         }
     };
 
@@ -59,8 +73,11 @@ app.service('MainService', function ($http) {
 
     me.omega3SummaryText = {
         high: '你的Omega-3（欧米伽3 多元不饱和脂肪酸）处在理想范围内，位于超过了8％的区间。 建议你保持目前的Omega-3摄入量。',
+        highSpare: '你的Omega-3（欧米伽3 多元不饱和脂肪酸）处在理想范围内，位于超过了8％的区间。 建议你保持目前Omega-3脂肪酸中DHA和EPA的摄入量。',
         medium: '你的Omega-3（欧米伽3 多元不饱和脂肪酸）在中度范围内位于4-8％的区间。建议你增加Omega-3脂肪酸的摄入量。',
-        low: '你的Omega-3（欧米伽3 多元不饱和脂肪酸）远低于目标范围所处的8％的区间。 建议你增加Omega-3脂肪酸的摄入量。'
+        mediumSpare: '你的Omega-3（欧米伽3 多元不饱和脂肪酸）在中度范围内位于4-8％的区间。建议你增加Omega-3脂肪酸中DHA和EPA的摄入量。',
+        low: '你的Omega-3（欧米伽3 多元不饱和脂肪酸）远低于目标范围所处的8％的区间。 建议你增加Omega-3脂肪酸的摄入量。',
+        lowSpare: '你的Omega-3（欧米伽3 多元不饱和脂肪酸）远低于目标范围所处的8％的区间。 建议你增加Omega-3脂肪酸中DHA和EPA的摄入量。'
     };
 
     me.omega3DetailText = '\
@@ -76,9 +93,11 @@ app.service('MainService', function ($http) {
         </p>';
 
     me.n6n3SummaryText = {
-        low: '你的Omega6：Omega3比例处在理想范围内，位于低于4：1的区间。 建议你保持目前的Omega-3摄入量。',
-        medium: '你的Omega6：Omega3比例在中度范围内位于4：1 - 6：1的区间。建议你增加Omega-3脂肪酸的摄入量。',
-        high: '你的Omega6：Omega3比例远高于目标范围所处的4：1的区间。 建议你增加Omega-3脂肪酸的摄入量。'
+        low: '你的Omega6：Omega3比例处在理想范围内，位于低于4：1的区间。 建议你保持目前的总Omega-3摄入量。',
+        medium: '你的Omega6：Omega3比例在中度范围内位于4：1 - 6：1的区间。建议你增加总Omega-3脂肪酸的摄入量。',
+        mediumSpare: '你的Omega6：Omega3比例在中度范围内位于4：1 - 6：1的区间。建议你增加目前的总Omega-3摄入量，并减少Omega-6的摄入量',
+        high: '你的Omega6：Omega3比例远高于目标范围所处的4：1的区间。 建议你增加总Omega-3脂肪酸的摄入量。',
+        highSpare: '你的Omega6：Omega3比例远高于目标范围所处的4：1的区间。 建议你增加目前的总Omega-3摄入量，并减少Omega-6的摄入量。'
     };
 
     me.n6n3DetailText = '\

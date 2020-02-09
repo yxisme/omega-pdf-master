@@ -96,4 +96,13 @@
   .chart_font_size {
     font-size:10px;
   }
+  .logo {
+    float: left;
+  }
+  .logo-text {
+    margin: -9px 0 0 30px;
+    font-size: 35px;
+    font-family: monospace;
+    font-weight: bold;
+  }
 }

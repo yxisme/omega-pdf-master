@@ -81,7 +81,7 @@ app.controller('MainController', function ($scope, MainService) {
     }
 
     function processOmega3IndexText(data) {
-        data['omega3_index_summary_text'] = MainService.getOmega3IndexSummaryText(data['omega3_index']);
+        data['omega3_index_summary_text'] = MainService.getOmega3IndexSummaryText(data['omega3_index'], data['n6_n3']);
         data['omega3_index_detail_text'] = MainService.getOmega3IndexDetailText(data['omega3_index']);
     }
     
