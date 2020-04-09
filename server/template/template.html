@@ -40,7 +40,7 @@
             <div class="row top15">
                 <ng-include src="'views/profile-table.html'" class="col-xs-7"></ng-include>
                 <div class="col-xs-3 nopadding">
-                    <div class="index-label">你的指标</div>
+                    <div class="index-label">您的指标</div>
                     <div class="custom_font_size">
                         参考区间*: {{report.omega3_index_ref_range}}
                     </div>
@@ -69,7 +69,7 @@
             <div class="row top15">
                 <ng-include src="'views/profile-table.html'" class="col-xs-7"></ng-include>
                 <div class="col-xs-3 nopadding">
-                    <div class="index-label">你的指标</div>
+                    <div class="index-label">您的指标</div>
                     <div class="custom_font_size">
                         参考区间*: {{report.n6_n3_ref_range}}
                     </div>
@@ -98,7 +98,7 @@
             <div class="row top15">
                 <ng-include src="'views/profile-table.html'" class="col-xs-7"></ng-include>
                 <div class="col-xs-3 nopadding">
-                    <div class="index-label">你的指标</div>
+                    <div class="index-label">您的指标</div>
                     <div class="custom_font_size">
                         参考区间*: {{report.trans_fat_index_ref_range}}
                     </div>
@@ -142,13 +142,13 @@
                     <tbody>
                     <!--SECTION-1-->
                     <tr class="border-bottom title">
-                        <td>Omega-3多元不饱和脂肪酸</td>
+                        <td>Omega-3多不饱和脂肪酸</td>
                         <td>{{report.total_omega3}}</td>
                         <td>{{report.total_omega3_rank}}</td>
                         <td>{{report.total_omega3_ref_range}}</td>
                     </tr>
                     <tr>
-                        <td>Omega-3多元不饱和脂肪酸指标</td>
+                        <td>Omega-3多不饱和脂肪酸指标</td>
                         <td>{{report.omega3_index}}</td>
                         <td>{{report.omega3_index_rank}}</td>
                         <td>{{report.omega3_index_ref_range}}</td>
@@ -179,7 +179,7 @@
                     </tr>
                     <!--SECTION-2-->
                     <tr class="border-both title">
-                        <td>Omega-6多元不饱和脂肪酸</td>
+                        <td>Omega-6多不饱和脂肪酸</td>
                         <td>{{report.total_omega6}}</td>
                         <td>{{report.total_omega6_rank}}</td>
                         <td>{{report.total_omega6_ref_range}}</td>
@@ -216,7 +216,7 @@
                     </tr>
                     <!--SECTION-3-->
                     <tr class="border-both title">
-                        <td>顺式单元不饱和脂肪酸</td>
+                        <td>顺式单不饱和脂肪酸</td>
                         <td>{{report.total_monounsaturated}}</td>
                         <td>{{report.total_monounsaturated_rank}}</td>
                         <td>{{report.total_monounsaturated_ref_range}}</td>
@@ -396,7 +396,7 @@
     </div>
 
     <!--PAGE 5-->
-    <div style="font-size:16px" class="custom_font_size page-container page-break-after" ng-if="report.is_professional">
+    <div style="font-size:18px" class="custom_font_size page-container page-break-after" ng-if="report.is_professional">
         <ng-include src="'views/header-1.html'"></ng-include>
         <div class="report-body">
             <div class="row top15">
@@ -404,30 +404,27 @@
                 <ng-include src="'views/profile-table.html'" class="col-xs-7"></ng-include>
             </div>
             <div class="top15">
-                <p class="bolder-text">欧米伽-3多元不饱和脂肪酸</p>
+                <p class="bolder-text">欧米伽3多不饱和脂肪酸</p>
                 <p>
-                    这里记录的四种Omega-3多元不饱和脂肪酸(下称Omega-3)包括“植物类”Omega-3(阿尔法亚麻酸，alpha-linolenic acid,
-                    ALA)和三种“鱼类”Omega-3(EPA，DHA和DPA
-                    n-3)。ALA是膳食中两种重要脂肪酸之一，即使说像维他命那样，我们不能自己生成，因此我们需要从食物中摄取。从膳食中摄入ALA的量建议每天为1.5克，接近于目前美国平均的摄入量。ALA主要来自于豆油中(也是很多经加工食物的成分)，其他特定的食物/油也是丰富的资源，比如茨欧鼠尾草籽油、亚麻子油、黑胡桃。严格来说“鱼类”Omega-3不是必要的脂肪酸，因为我们体内可以从ALA中生成。但是我们的身体并不能有效的生成它们，所以直接服用EPA和DHA对身体有好处(参照我们网站底部的连接)。普遍而言健康的成年人的EPA+DHA量建议保持在250mg毫克/天()至500毫克/天［营养和营养学学会，脂肪酸和脂类研究国际协会］。Omega-3指标由血液内EPA和DHA值的总数测得。虽然Omega-3的理想浓度设于大于8％，但现在没有足够的研究能建议ALA(或DPA
-                    n-3)的理想血中浓度。
+                    这里记录的四种Omega-3多不饱和脂肪酸(下称Omega-3)包括“植物类”Omega-3(阿尔法亚麻酸，alpha-linolenic acid, ALA)和三种“鱼类”Omega-3(EPA，DHA和DPAn3)。ALA是膳食中两种重要脂肪酸之一，像维生素一样，我们不能自己生成，因此需要从食物中摄取。从膳食中摄入ALA的量建议每天为2克。ALA主要来自于菜籽油或者芥花油中，其他来源丰富的食物包括茨欧鼠尾草籽油、亚麻子油、胡桃等。严格来说“鱼类”Omega-3不是必要的脂肪酸，因为我们体内可以从ALA中生成。但是我们的身体并不能有效的生成它们，所以直接服用EPA和DHA对身体有好处。普遍而言，健康的成年人的EPA+DHA量建议保持在250mg毫克/天至500毫克/天［中国营养学会，国际脂肪酸和类脂研究学会］。Omega-3指标由血液内EPA和DHA值的总数测得，理想浓度为大于8%。
                 </p>
             </div>
             <div class="top15">
-                <p class="bolder-text">欧米伽-6多元不饱和脂肪酸</p>
+                <p class="bolder-text">欧米伽6多不饱和脂肪酸</p>
                 <p>
-                    我们测试Omega-6多元不饱和脂肪酸(下称Omega-3)中七种脂肪酸水平，但所有Omega-6中的85%仅从两种脂肪酸中而来——亚油酸(LA)和花生四烯酸(AA)。LA是和ALA一样重要的脂肪酸，我们的身体可以从LA生成其他Omega-6，包括AA。我们知道AA是影响很多不同的细胞过程。血液中LA浓度普遍是由你数个月平均进食量而决定的，然而AA(和其他五种Omega-6)的浓度并不是由进食量而是主要取决于你身体的新陈代谢。换言之，你几乎不能自发改变七分之六的Omega-6的血中浓度，并且明显改变LA血中浓度需要数月至数年。大多数专家建议LA每天摄入量应在12-24克间；目前在美国人们平均摄入量为15克每天。专家们就Omega-6在现代饮食中对我们的健康是好是坏进行过重要的争议。一些人指出AA本身就是我们身体分泌促炎分子的起始元素，并且因为长期炎症很明显是不健康的，所以AA肯定有一定问题。(包括Dr.Harris和大多数世界营养学组织在内的)其他人持反对态度，大多数研究中表示，相比摄入更少LA的人而言，摄入更多LA的人降低了患有心血管疾病的风险。一项近期的研究发现血液内AA浓度越高，心脏病发率越低。基于大量的反对证据显示，我们认为判别Omega-6对身体有害并不正确。尽管如此，目前确定“健康的”LA或AA浓度都有些困难。一些研究显示相比较低浓度的LA而言，LA浓度大于16%左右心脏更健康，但到目前为止并没有强力的证据能让我们确定理想数值。我们需要更多的研究支持。
+                    我们测试Omega-6多不饱和脂肪酸(下称Omega-6)中七种脂肪酸水平。各种Omega-6中的85%仅从两种脂肪酸中而来——亚油酸(LA)和花生四烯酸(AA)。LA是和ALA一样重要的脂肪酸，我们的身体可以从LA生成其他Omega-6，包括AA。我们知道AA影响很多不同的细胞过程。血液中LA浓度是由过去几个月的平均进食量而决定的，而AA(和其他五种Omega-6)的浓度则主要取决于身体的代谢水平。换言之，您几乎不能自主改变血液中将近七分之六的Omega-6浓度，并且明显改变血液中的LA浓度需要数月之久。大多数专家建议LA每天摄入量应在12-24克间；目前国人每天平均摄入量为15克。AA是神经元的重要组成部分，也是我们身体分泌促炎分子的起始元素，而长期炎症很明显是不健康的，所以AA摄入既必需，也不适宜过多。
                 </p>
             </div>
             <div class="top15">
                 <p class="bolder-text">顺式单不饱和脂肪酸</p>
                 <p>
-                    在你的OmegaQuant血液分析中这类顺式单不饱和脂肪酸中又分为四种脂肪酸，但这类脂肪酸中的95%都只从一种叫油酸的脂肪酸中生成。这种脂肪酸在饮食中随处可见，也可以在体内生成，因此这不是种重要的脂肪酸。虽然相对而言在“地中海膳食中”发现该含量较多(因为它们主要使用橄榄油)，但油酸对心脏健康的影响如Omega-6一样具有争议。一些研究认为越高越好但也有其他研究提出相反的结论。因此，我们不能就油酸含量在血中浓度的理想数值提供确实的具有科学基础的意见。即使我们可以，油酸浓度(就如Omega-6一样)相对难以改变，且需要通过改善数月至数年的饮食来调整。所以，即使我们能建议出健康的理想水平，我们也并不清楚一个人应如何确实地实行。目前，为完整起见在报告中我们提供了油酸水平，但这并不是在建议膳食的改变。大多数植物油是油酸的来源，特别是橄榄油和芥花油。在顺式单不饱和脂肪酸类别中除此之外仅有棕榈油酸有同等作用。通常这种油酸仅占你的血液中脂肪酸浓度的0.5%，但高浓度也许表示了你摄取了过度的精致碳水化合物(糖、高果糖玉米糖浆、白砂糖等)。
+                    在您的血液分析中，这类顺式单不饱和脂肪酸中又分为四种脂肪酸，这类脂肪酸中的95%都只从一种叫油酸的脂肪酸中生成。这种脂肪酸在饮食中随处可见（如橄榄油和山茶油)，也可以在体内生成，因此不是必需脂肪酸。相对而言在“地中海膳食”中油酸含量较多。油酸浓度相对难以改变，需要通过改善数月的饮食来调整。目前，为完整起见，在报告中我们提供了油酸水平。很多植物油是油酸的来源，特别是橄榄油和芥花油。在顺式单不饱和脂肪酸类别中除此之外仅有棕榈油酸有同等作用。通常棕榈油酸仅占您的血液中脂肪酸浓度的0.5%，高浓度也许表示了您摄取了过度的精致碳水化合物(糖、高果糖玉米糖浆、白砂糖等)。
                 </p>
             </div>
             <div class="top15">
                 <p class="bolder-text">饱和脂肪酸</p>
                 <p>
-                    在OmegaQuant报告中有六种饱和脂肪酸。饱和脂肪酸和不饱和脂肪酸(无论是但不饱和脂肪酸还是多不饱和脂肪酸)有化学性质上的不同，它们没有“双键”。这些键改变了脂肪酸的构成，也意味着改变了它们在人体内和食物中的作用。大多数由饱和脂肪酸制成的产物或食物在室温下为固体(黄油、起酥油、猪油)，但那些由不饱和脂肪酸制成的产物或食物则为液体(菜油或鱼油)。重申一次，这类饱和脂肪酸中大多数是从两种脂肪酸中生成的:棕榈酸和硬脂酸。血液中这两种脂肪酸一起占了平均98%的饱和脂肪酸，棕榈酸制造了2/3的饱和脂肪酸。硬脂酸对健康没什么影响，但高棕榈油酸也许有影响。高棕榈酸会引起高胆固醇，因此提高了患心脏病的风险。值得注意的是新研究现实膳食中(或血液中)高棕榈酸和患心脏病概率高没有关系，因此传统观点引起了质疑。近期我们发现血液中高棕榈酸与患糖尿病率更高有关，糖尿病几乎成为现在美国的一种流行病。因此将棕榈酸保持低于“平均值”(比如低于23%)是聪明的决定，虽然并没有有力证据显示这会降低患糖尿病风险。即使我们还不确定棕榈酸合适的血中浓度，但是以饱和脂肪酸含量高的食物代替不饱和脂肪酸(特别是多不饱和脂肪酸、Omega-6和Omega-3)含量高的食物还是明智的选择。再次重申，我们需要更多的实验研究。
+                    报告中有六种饱和脂肪酸。饱和脂肪酸和不饱和脂肪酸(无论是单不饱和脂肪酸还是多不饱和脂肪酸)化学性质不同，它们没有“双键”。双键改变了脂肪酸的构成，也意味着改变了它们在人体内和食物中的作用。大多数由饱和脂肪酸制成的产物或食物在室温下为固体(黄油、起酥油、猪油)，但那些由不饱和脂肪酸制成的产物或食物则为液体(菜油或鱼油)。饱和脂肪酸大多数是从两种脂肪酸中生成的:棕榈酸和硬脂酸。血液中这两种脂肪酸一起占了饱和脂肪酸的接近98%，棕榈酸制造了2/3的饱和脂肪酸。硬脂酸对健康没什么影响，但高棕榈酸也许有影响。高棕榈酸会引起高胆固醇，因此提高了患心脏病的风险。近期发现血液中高棕榈酸与糖尿病患病率升高有关。因此将棕榈酸保持低于“平均值”(比如低于23%)是明智的决定。
                 </p>
             </div>
         </div>
@@ -435,7 +432,7 @@
     </div>
 
     <!--PAGE 6-->
-    <div class="custom_font_size page-container page-break-after" ng-if="report.is_professional">
+    <div style="font-size: 18px" class="custom_font_size page-container page-break-after" ng-if="report.is_professional">
         <ng-include src="'views/header-1.html'"></ng-include>
         <div class="report-body">
             <div class="row top15">
@@ -449,10 +446,83 @@
                 </p>
             </div> -->
             <div class="top15">
-                <p class="bolder-text">比率</p>
+                <p class="bolder-text">AA:EPA比率</p>
                 <p>
-                    完整的脂肪酸简介报告包括了两种脂肪酸比率:Omega-6:Omega-3比率和AA:EPA比率。虽然我们处于对一些认为这些数据有用的执业医生的好意包含了这些比率，但我们相信Omega-3指数信息更充实，并且是我们的报告中最重要最全面的部分。我们相信最快最有效提高两种比率之一的方法是摄入更多的EPA＋DHA，而非少摄入Omega-6。其原因(如上述)，少摄入Omega-6对影响Omega-6的血中浓度影响极小，并且减少Omega-6的摄入和提高心脏病风险有关。因此我们认为建议减少摄入Omega-6是错误的，正确的建议是提高Omega-3(特别是EPA和DHA)的摄入。这些比率的理想值相应Omega-3指标>8%时大约为:Omega-6/Omega-3比率为3.5或更少；AA/EPA比率为9或更少。
+                    您的脂肪酸谱检测报告包括了两种脂肪酸比率:Omega-6:Omega-3比率和AA:EPA比率。
+                    <br>
+                    <br>
+                    前面提到，AA和EPA都是对人体很重要的必需脂肪酸。但是它们对于身体内的炎症反应有不同的作用。EPA抑制花生四烯酸（AA）的产生，从而抑制细胞炎症介质类花生酸（eicosanoids）的产生。从饮食中摄入的EPA越多，体内生产的AA就越少，身体生产的促炎性类二十烷酸（前列腺素，血栓烷，白三烯等）就越少。其次, EPA还与AA竞争需要的磷脂酶A2酶，从膜磷脂（A2存储在其中）释放AA。
+                    <br>
+                    <br>
+                    研究表明，EPA对于降低神经炎症至关重要。由于EPA进入大脑容易氧化，唯一控制大脑中细胞炎症的方法是保持血液中EPA的高水平，进而影响抑郁、多动症、脑震荡等。
+                    <br>
+                    <br>
+                    血液中两种必需脂肪酸AA：EPA的比例指示了细胞炎症的可能水平。高水平的细胞炎症并不意味着您患有疾病状态，但它确实表明您的未来健康状况欠佳，如下所示。
                 </p>
+                <table border="1" class="o-table-2">
+                    <tr>
+                        <th>AA/EPA范围</th>
+                        <th>细胞炎症</th>
+                        <th>未来的健康状况</th>
+                    </tr>
+                    <tr>
+                        <td>1.5 至 3</td>
+                        <td>低</td>
+                        <td>最佳</td>
+                    </tr>
+                    <tr>
+                        <td>3 至 6</td>
+                        <td>中等</td>
+                        <td>好</td>
+                    </tr>
+                    <tr>
+                        <td>7 至 15</td>
+                        <td>升高</td>
+                        <td>中等</td>
+                    </tr>
+                    <tr>
+                        <td>> 多过 15</td>
+                        <td>高</td>
+                        <td>差</td>
+                    </tr>
+                </table>
+                <p><br>这是无征兆炎症的黄金标准测试，对于癌症、阿兹海默症和心脏疾病等的早期预测有指导意义。理想的 AA/EPA比率介于1和3。若比率高于10,则对健康不利。比率超过15,意味身体处于无征兆炎症状态,您须加倍留意。细胞炎症水平越高，慢性病的未来发展就越有可能加速。
+降低AA/EPA 比率的最快方法是大量增加富含EPA的高纯度欧米伽3脂肪酸的摄入量。最好的长期方法是通过严格的抗炎饮食同时降低血液中的AA水平。抗炎饮食与高纯度欧米伽3结合使用是达到和维持低水平细胞炎症的最有效方法。
+</p>
+                <table border="1" class="o-table-2">
+                    <thead>
+                        <tr class="border-both">
+                            <th style="width: 40%">每天所补充的EPA和DHA(克)</th>
+                            <th style="width: 40%">AA/EPA 比率</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>12.1</td>
+                        </tr>
+                        <tr>
+                            <td>0.8</td>
+                            <td>4.7</td>
+                        </tr>
+                        <tr>
+                            <td>2.5</td>
+                            <td>2.6</td>
+                        </tr>
+                        <tr>
+                            <td>5.0</td>
+                            <td>1.3</td>
+                        </tr>
+                        <tr>
+                            <td>7.5</td>
+                            <td>1.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><br>上面的数据表明，每天2.5克的EPA和DHA足以使AA/EPA比率达到所需的范围，从而提供良好的健康。研究表明，患有各种慢性疾病的患者，他们的AA/EPA比率升高（>15）。当每日补充2.5克EPA 和DHA，他们的AA/EPA 比例下降至大约2.5。与健康个体相比，患有慢性疾病的人可能需要在医生指导下使用更大量的欧米伽3。
+为了更好的掌控日常饮食所需欧米伽3的最佳用量，需要通过每6 至12 个月进行一次脂肪谱检测来确定Omega-6:Omega-3比率和AA:EPA比率。
+</p>
             </div>
         </div>
         <ng-include ng-repeat="page in [{'page': 5}]" src="'views/footer-1.html'"></ng-include>

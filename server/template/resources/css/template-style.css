@@ -105,4 +105,16 @@
     font-family: monospace;
     font-weight: bold;
   }
+
+  .o-table-2 {
+    width: 100%;
+  }
+
+  .o-table-2 th {
+    text-align: center;
+  }
+
+  .o-table-2 td {
+    text-align: center;
+  }
 }
